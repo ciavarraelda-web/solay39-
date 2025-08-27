@@ -1,0 +1,170 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+a {
+  color: #1dd1a1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container generale */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header .logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #1dd1a1;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Card stile generale */
+.card {
+  background: #161b22;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+/* Mini Poker */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.card-face {
+  font-size: 2.5rem;
+  background: #0d1117;
+  border: 2px solid #1dd1a1;
+  border-radius: 8px;
+  width: 60px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card-face:hover {
+  transform: scale(1.1);
+}
+
+/* Inputs e bottoni */
+input[type=number] {
+  width: 80px;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+button {
+  background-color: #1dd1a1;
+  color: #0d1117;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #10ac84;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Sezione staking */
+.card p {
+  margin-bottom: 0.5rem;
+}
+
+/* Roadmap */
+.card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card ul li::before {
+  content: "✔️";
+  margin-right: 0.5rem;
+  color: #1dd1a1;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #1dd1a1;
+}
+
+/* Responsività */
+@media (min-width: 768px) {
+  .cards {
+    justify-content: flex-start;
+  }
+
+  .header h1 {
+    font-size: 2.8rem;
+  }
+
+  .header .logo {
+    width: 150px;
+  }
+}
